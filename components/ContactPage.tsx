@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import styles from '@/styles';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { links, cardData2 } from '@/constants';
-import connect from '../public/connect.png';
+import { cardData2 } from '@/constants';
 import { staggerContainer, fadeIn } from '@/utils/motion';
 import ContactForm from './ContactForm';
 
@@ -28,7 +25,7 @@ const ContactPage: React.FC = () => {
               Let's <span className='text-[#57A773]'>Connect</span> Today!
             </h1>
             <p className='text-lg md:text-xl mt-4 mb-6 font-medium'>
-              Reach out via email, phone, or the form below to schedule your free 15-minute consultation.
+              Reach out via email or the form below to schedule your free 15-minute consultation.
             </p>
             <div className='flex justify-center md:justify-start'>
               <a href='#contact-form' className='inline-block bg-white text-[#2F5D62] px-8 py-3 text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform'>
@@ -44,8 +41,8 @@ const ContactPage: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image 
-              src={connect}
+            <img
+              src='/connect.png'
               alt='Connect with Samuel'
               width={360}
               height={360}

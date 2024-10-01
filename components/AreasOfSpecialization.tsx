@@ -8,6 +8,7 @@ import { RiFlowerFill, RiMentalHealthFill } from 'react-icons/ri';
 import { GrSpectrum } from 'react-icons/gr';
 import { SiSololearn } from 'react-icons/si';
 import { HeaderText } from './ui/CustomTexts';
+import { MdEmojiEmotions } from 'react-icons/md';
 
 const AreasOfSpecialization = () => {
   const specializations = [
@@ -27,7 +28,7 @@ const AreasOfSpecialization = () => {
       description: 'ADHD involves inattention, impulsivity and hyperactivity, while ASD affects communication and social behavior. Both require tailored approaches for treatment.',
     },
     {
-      icon: <FaBrain />,
+      icon: <MdEmojiEmotions />,
       title: 'Social & Emotion Regulation Skills Training',
       description: 'This training helps individuals manage emotions, improve communication, and navigate social situations, especially in cases of ADHD, ASD, or mood disorders.',
     },

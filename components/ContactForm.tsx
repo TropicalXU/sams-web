@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from 'emailjs-com';
@@ -49,7 +48,7 @@ const ContactForm = () => {
         >
           {/* Image Icon */}
           <div className='flex justify-center mb-6'>
-            <Image src='/sam-contact.png' alt='Contact Icon' width={89} height={89} />
+            <img src='/sam-contact.png' alt='Contact Icon' width={89} height={89} />
           </div>
   
           {/* Email */}
@@ -85,7 +84,7 @@ const ContactForm = () => {
           </div>
   
           {/* Subject */}
-          <div className='mb-6'>
+          {/* <div className='mb-6'>
             <label htmlFor="subject" className='block text-[#2F5D62] font-semibold mb-2'>
               <span className='fa fa-info-circle mr-2'></span>Subject<span className='text-[#e94747]'> *</span>
             </label>
@@ -97,7 +96,7 @@ const ContactForm = () => {
               required
               className='w-full bg-[#f1f3f5] py-3 px-4 rounded-lg border-none focus:ring-2 focus:ring-[#2F5D62]'
             />
-          </div>
+          </div> */}
   
           {/* Message */}
           <div className='mb-6'>
@@ -105,8 +104,8 @@ const ContactForm = () => {
               <span className='fa fa-comment-alt mr-2'></span>Message<span className='text-[#e94747]'> *</span>
             </label>
             <textarea 
-              id="message" 
-              name="message" 
+              id="user_message" 
+              name="user_message" 
               rows={6} 
               placeholder='Write your message here...' 
               required

@@ -2,41 +2,70 @@
 
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
-import hero from '../public/hero-bg.jpg'
 import styles from '@/styles'
 import React from 'react'
-import Image from 'next/image'
-import brain from '../public/brain.svg'
-import cbt from '../public/CBT.jpg'
-import dbt from '../public/DBT.jpg'
-import adhd from '../public/adhd.jpg'
 import { HeaderText } from './ui/CustomTexts'
-import { FaChevronRight } from 'react-icons/fa'
-
+import { cardData } from '@/constants'
 
 
 const Treatments = () => {
 
-    const words = [
-        {
-          text: "Treatment"
-        },
-        {
-          text: "modalities.",
-          className: "text-[#2F5D62]",
-        },
-      ];
-
   return (
     <section className={`${styles.xPaddings} relative z-10 inset-0 h-full w-full bg-white mt-[120px]`}>
+    {/* Header */}
+        <div className='flex flex-col-reverse md:flex-row items-center justify-between bg-gradient-to-r from-[#f0f4f8] to-white rounded-xl py-12 md:py-20 px-6 md:px-16 mb-4'>
+        {/* Left Side - Image */}
+            <div className='flex-1 flex justify-center md:mt-0 mt-6'>
+                <img alt="Services" src='/services.png' className='w-[480px] md:w-[320px] rounded-lg transition-transform duration-300 hover:scale-105' />
+            </div>
+            {/* Right Side - Heading */}
+            <div className='flex-1 text-center md:text-left mt-8 md:mt-0'>
+                <h1 className='text-[#2F5D62] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight'>
+                <span className='text-[#57A773]'>Services</span>
+                </h1>
+                <p className='mt-4 text-lg md:text-xl text-[#2F5D62] max-w-[600px] mx-auto md:mx-0'>
+                Sessions are offered in both virtual and in-person for individual and child thetapy.
+                </p>
+            </div>
+        </div>
+        <div className="bg-gradient-to-r from-white to-[#f0f4f8] rounded-xl flex flex-col justify-center items-center text-center py-8 px-6 mb-10">
+            <div className="w-full flex flex-col justify-center items-center gap-8 px-5 mt-6">
+                {cardData.map((data, index) => (
+                <motion.div
+                    key={index}
+                    variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
+                    className="w-full bg-[#2F5D62] border border-[#A7C4BC] rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-500 hover:shadow-lg"
+                >
+                    <div className="relative z-10 p-6 text-center flex flex-col items-center">
+                        {/* Icon */}
+                        <div className="w-16 h-16 flex items-center justify-center bg-[#E8F6F8] rounded-full shadow-lg mb-6 transform group-hover:scale-110 transition duration-500">
+                        <div className="text-3xl text-[#2F5D62]">{data.icon}</div>
+                        </div>
+                        <div className='bg-[#A7C4BC] p-4 rounded-xl'>
+                        {/* Title */}
+                        <h3 className="text-xl font-semibold text-[#2F5D62] mb-3">
+                        {data.title}
+                        </h3>
+
+                        {/* Subtitle */}
+                        <p className="text-md text-white">
+                        {data.subtitle}
+                        </p>
+                        </div>
+                        <p  className='text-white mt-4 p-6'>{data.description}</p>
+                    </div>
+                </motion.div>
+                ))}
+            </div>
+        </div>
         <div className={`mx-12`}>
             <div className={`${styles.xPaddings} flex justify-center relative z-10 mb-5`}>
                 <div className='flex justify-center flex-col items-center text-center'>
                     <HeaderText
                         title={(<>Treatment <span className='text-[#2F5D62]'>Modalities</span></>)}
-                        textStyles="text-[44px] md:text-[72px] main-font mb-4"
+                        textStyles="ext-[36px] lg:text-[52px] main-font mb-4"
                     />
-                    <p className="text-xl md:text-2xl text-[#2F5D62] my-4">Comprehensive Approaches Tailored to Your Healing Journey</p>
+                    <p className="md:text-2xl text-lg text-[#2F5D62] my-4">Comprehensive Approaches Tailored to Your Healing Journey</p>
                 </div>
             </div>
             <motion.div
@@ -57,9 +86,9 @@ const Treatments = () => {
                 className={`flex ${styles.flexCenter}`}
                 >
                     <div className='md:w-[460px] my-4'>
-                        <Image
-                        alt='design stage'
-                        src={cbt}
+                        <img
+                        alt='Cognitive Behaviour Therapy'
+                        src='/CBT.jpg'
                         className="rounded-md shadow-lg border-[6px] border-[#fff] object-cover"
                         />
                     </div>
@@ -76,10 +105,10 @@ const Treatments = () => {
                 className={`flex ${styles.flexCenter} order-2 md:order-1`}
             >
                 <div className='md:w-[460px] my-4'>
-                    <Image
-                        alt='design stage'
-                        src={dbt}
-                        className="rounded-lg shadow-lg border-[6px] border-[#fff] object-contain"
+                    <img
+                        alt='Dialectial Behaviour Therapy Image'
+                        src='/dbt1.png'
+                        className="rounded-lg border-[6px] border-[#fff] object-contain"
                     />
                 </div>
             </motion.div>
@@ -110,9 +139,9 @@ const Treatments = () => {
                 className={`flex ${styles.flexCenter}`}
                 >
                     <div className='md:w-[460px] my-4'>
-                        <Image
-                        alt='design stage'
-                        src={hero}
+                        <img
+                        alt='Internal Family System Image'
+                        src='/ifs.jpg'
                         className="rounded-lg shadow-2xl border-[6px] border-[#fff] object-contain"
                         />
                     </div>
@@ -129,9 +158,9 @@ const Treatments = () => {
                 className={`flex ${styles.flexCenter} order-2 md:order-1`}
             >
                 <div className='md:w-[460px] my-4'>
-                    <Image
-                        alt='design stage'
-                        src={hero}
+                    <img
+                        alt='Somatic Experiencing Therapy Image'
+                        src='/set.png'
                         className="rounded-lg shadow-2xl border-[6px] border-[#fff] object-contain"
                     />
                 </div>
@@ -163,9 +192,9 @@ const Treatments = () => {
                 className={`flex ${styles.flexCenter}`}
                 >
                     <div className='md:w-[460px] my-4'>
-                        <Image
-                        alt='design stage'
-                        src={adhd}
+                        <img
+                        alt='Behaviour Therapy for Managing ADHD image'
+                        src='/adhd2.jpg'
                         className="rounded-lg shadow-2xl border-[6px] border-[#fff] object-contain"
                         />
                     </div>
@@ -182,10 +211,10 @@ const Treatments = () => {
                 className={`flex ${styles.flexCenter} order-2 md:order-1`}
             >
                 <div className='md:w-[460px] my-4'>
-                    <Image
-                        alt='design stage'
-                        src={hero}
-                        className="rounded-lg shadow-2xl border-[6px] border-[#fff] object-contain"
+                    <img
+                        alt='Solution-Focused Brief Therapy Image'
+                        src='/adhd.jpg'
+                        className="border-[6px] border-[#fff] object-contain"
                     />
                 </div>
             </motion.div>

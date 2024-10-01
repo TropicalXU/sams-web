@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${inter.className}, ${poppins.className}`}>
         <div className={`relative ${montserrat}`}>
         {children}
+        <CookieBanner />
         </div>
       </body>
     </html>

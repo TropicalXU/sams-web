@@ -1,21 +1,9 @@
 "use client";
 
-import Button from './ui/Button';
-import Image from 'next/image';
 import styles from '@/styles';
-import hero from '../public/hero-img.png';
-import { TypewriterEffectSmooth } from './ui/Typewriter';
 import Link from 'next/link';
-import { RiCalendarScheduleFill } from 'react-icons/ri';
-import { HeaderText } from './ui/CustomTexts';
 
 const Hero = () => {
-  const words = [
-    { text: "Empowering" },
-    { text: "you" },
-    { text: "to" },
-    { text: "thrive.", className: "text-[#2F5D62]" },
-  ];
 
   return (
     <section className={`${styles.xPaddings} relative z-10 mt-[120px]`}>
@@ -28,7 +16,9 @@ const Hero = () => {
           </h1>
           {/* <h1 className="text-[#2F5D62] text-center md:text-start font-bold text-5xl md:text-6xl lg:text-6xl mt-12 md:mt-4">Helping you on your journey to mental wellness</h1> */}
           <div className="text-2xl md:text-3xl font-medium text-gray-700 relative">
-            <TypewriterEffectSmooth words={words} />
+            <h1 className='text-3xl md:text-5xl text-center md:text-start font-extrabold leading-tight'>
+              Helping you on your journey to  <span className='text-[#57A773]'>mental wellness.</span>
+            </h1>
           </div>
           
           <Link href="/contact">
@@ -40,13 +30,12 @@ const Hero = () => {
 
         {/* Right Section: Hero Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
-          <Image
-            alt="Hero"
-            src={hero}
+          <img
+            alt="Hero Image"
+            src='/hero-img.png'
             width={640}
             height={720}
             className="w-full h-auto object-cover"
-            priority
           />
         </div>
       </div>

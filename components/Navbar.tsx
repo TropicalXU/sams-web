@@ -3,11 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { navVariants } from '../utils/motion';
-import close from '../public/close.svg';
-import menu from '../public/menu.svg';
 import Link from 'next/link';
-import Image from 'next/image';
-import brand from '../app/favicon.ico';
 
 const variants = {
   open: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 50 } },
@@ -36,7 +32,7 @@ const Navbar = () => {
       >
         {/* Logo */}
         <Link href='/' className='flex items-center'>
-          <Image alt='Samuel Gasilan' src={brand} className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]' />
+          <img alt='Samuel Gasilan' src='/favicon.ico' className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]' />
           <span className='ml-4 text-2xl font-bold text-gray-800 tracking-wide'>Samuel Gasilan</span>
         </Link>
 
@@ -68,8 +64,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <div className='md:hidden flex items-center'>
-          <Image
-            src={menu}
+          <img
+            src='/menu.svg'
             alt='menu'
             className='w-[28px] h-[28px] cursor-pointer'
             onClick={() => setToggle((prev) => !prev)}
@@ -90,8 +86,8 @@ const Navbar = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className='md:hidden flex items-center'>
-            <Image
-              src={toggle ? close : menu}
+            <img
+              src={toggle ? '/close.svg' : '/menu.svg'}
               alt='menu'
               className='w-[28px] h-[28px] cursor-pointer'
               onClick={() => setToggle((prev) => !prev)}
@@ -100,6 +96,9 @@ const Navbar = () => {
           <ul className='list-none flex flex-col items-center space-y-8 bg-gradient-to-r from-[#f0f4f8] to-[#dfe6e9] opacity-80 shadow-[#0e1d1fee] shadow-xl rounded-2xl p-5'>
             <li className={`cursor-pointer text-xl hover:scale-105 transition-transform ${isActive('/') ? 'text-[#2F5D62] font-semibold' : 'text-gray-600'} hover:text-[#2F5D62] transition-all duration-300`}>
               <Link href='/'>Home</Link>
+            </li>
+            <li className={`cursor-pointer text-xl hover:scale-105 transition-transform ${isActive('/services') ? 'text-[#2F5D62] font-semibold' : 'text-gray-600'} hover:text-[#2F5D62] transition-all duration-300`}>
+              <Link href='/about'>About</Link>
             </li>
             <li className={`cursor-pointer text-xl hover:scale-105 transition-transform ${isActive('/services') ? 'text-[#2F5D62] font-semibold' : 'text-gray-600'} hover:text-[#2F5D62] transition-all duration-300`}>
               <Link href='/services'>Services</Link>

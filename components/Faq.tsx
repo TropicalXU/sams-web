@@ -1,14 +1,10 @@
 'use client';
+
 import React, { useState } from 'react';
 import { FAQ } from '@/constants';
-import Image from 'next/image';
-import faq from '../public/faq.svg';
 import { motion } from 'framer-motion';
 import { staggerContainer } from '@/utils/motion';
-import { HeaderText } from './ui/CustomTexts';
-import questions from '../public/faq.png';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import styles from '@/styles';
 
 interface FaqAccordionProps {
   faqs: FAQ[];
@@ -26,9 +22,9 @@ const FaqAccordion: React.FC<FaqAccordionProps> = ({ faqs }) => {
     <div className="overflow-hidden relative max-w-full mx-5 mt-[120px] md:mt-[120px]">
       {/* Header */}
       <div className="bg-gradient-to-r from-[#f0f4f8] to-[#fff] rounded-xl flex flex-col md:flex-row justify-center items-center text-center py-8 px-6 mb-10">
-        <HeaderText title="Frequently Asked Questions" textStyles="text-[#2F5D62] text-3xl md:text-5xl md:text-4xl font-extrabold" />
+        <h1 className="text-[#2F5D62] text-5xl md:text-6xl font-extrabold leading-tight">Frequently Asked Questions</h1>
         <div className="mt-4 md:mt-0">
-          <Image alt="Frequently Asked Questions" src={questions} width={320} height={320} />
+          <img alt="Frequently Asked Questions" src='/faq.png' width={320} height={320} />
         </div>
       </div>
 

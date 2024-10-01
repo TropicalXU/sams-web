@@ -14,15 +14,15 @@ const Intro = () => {
         <main className="relative bg-[height:50px_50px] bg-[-50%] bg-gradient-to-r from-blue from-10% to-darkBlue to-90% flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
             <div className="max-w-7xl w-full">
                 <div className={`${styles.xPaddings} relative z-10 mx-auto`}>
-                    <div className='flex rounded-xl bg-white lg:flex-row flex-col mx-auto gap-8 space-x-12 px-5 mb-12'>
+                    <div className='flex justify-center rounded-xl bg-white lg:flex-row flex-col mx-auto gap-8 space-x-12 px-5 mb-12'>
                         <CardContainer className="inter-var">
-                            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-                                <CardItem translateZ="100" className="w-full mt-4">
+                            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border flex justify-center ">
+                                <CardItem translateZ="100" className="w-full mt-4 flex justify-center">
                                 <Image
                                     src={photo}
                                     height="500"
                                     width="500"
-                                    className=" w-full object-cover"
+                                    className="w-full object-cover flex align-center"
                                     alt="thumbnail"
                                 />
                                 </CardItem>

@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '@/utils/motion';
 import { TitleText } from './ui/CustomTexts';
 import styles from '@/styles';
-import Image from 'next/image';
-import sam from '../public/sam.jpg';
 import { BsArrowRight } from 'react-icons/bs';
 
 const HomeAbout: React.FC = () => {
@@ -35,14 +33,14 @@ const HomeAbout: React.FC = () => {
             {/* Profile Image */}
             <motion.div
               variants={fadeIn('left', 'tween', 0.25, 1)}
-              className="mt-6 mx-auto lg:mx-0"
+              className="mt-6 mx-auto md:mx-0 lg:mx-0 flex justify-center md:justify-start"
             >
-              <Image
-                alt="Samuel Gasilan"
+              <img
+                alt="Samuel Gasilan Photo"
                 className="rounded-lg shadow-sm"
                 height={280}
                 width={280}
-                src={sam}
+                src='/sam.jpg'
               />
             </motion.div>
 

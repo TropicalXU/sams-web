@@ -4,9 +4,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import styles from '../styles/index';
 import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../app/favicon.ico'; // Use your own logo image
-import { FaInstagram, FaGithub, FaLinkedin, FaMedium, FaMailchimp, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 
 // Define motion variants for the footer
 const footerVariants = {
@@ -26,7 +24,7 @@ const Footer = () => {
         <div className={`${styles.xPaddings} mx-auto flex flex-col md:flex-row justify-between items-center gap-10`}>
           {/* Brand Section */}
           <div className="flex w-1/2 md:w/1-3 flex-col items-center md:items-start mb-8 md:mb-0">
-            <Image alt="Samuel Gasilan" src={logo} className="w-[80px] h-[80px] mb-4" />
+            <img alt="Samuel Gasilan logo" src='/favicon.ico' className="w-[80px] h-[80px] mb-4" />
             <p className="text-[24px] font-bold text-white text-center md:text-left">Samuel Gasilan</p>
             <p className="text-center md:text-left text-[#ffffff90] mt-4">Helping you on your journey to mental wellness</p>
           </div>
@@ -46,11 +44,11 @@ const Footer = () => {
             <div className="flex flex-col text-white">
               <p className="text-[18px] font-semibold mb-4">Connect</p>
               <div className="flex space-x-4">
-                <a href="mailto:samgasilan.psychotherapy@gmail.com" className="flex flex-col md:flex-row text-white hover:text-[#ffffff80]"><FaEnvelope size={24} className='mr-3' />Email: info@samuelgasilan.com</a>
+                <a href="mailto:samgasilan.psychotherapy@gmail.com" className="flex flex-col md:flex-row text-white hover:text-[#ffffff80]"><FaEnvelope size={24} className='mr-3' />Email: samgasilan.psychotherapy@gmail.com</a>
               </div>
-              <div className="flex space-x-4 mt-4">
+              {/* <div className="flex space-x-4 mt-4">
               <a className='flex flex-col md:flex-row text-white hover:text-[#ffffff80]' href="https://www.instagram.com/layerlabs.io"><FaInstagram  className='text-[22px] mr-2'/>Instagram</a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -58,7 +56,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white border-opacity-20 my-8"></div>
         <div className={`${styles.xPaddings} mx-auto text-center text-white`}>
-        <p className="text-[14px] text-center font-medium my-6"><span className='text-white rounded-full p-3'>Created & Designed by <a href='https://www.layerlabs.io' className='bg-white font-semibold text-[#2F5D62] rounded-full px-3 py-1 ml-2'>Layerlabs Studio</a></span></p>
+        <p className="md:text-[14px] text-[9px] text-center font-medium my-6"><span className='text-white rounded-full p-3'>Created & Designed by <a href='https://www.layerlabs.io' className='bg-white font-semibold text-[#2F5D62] rounded-full px-3 py-1 ml-2'>Layerlabs Studio</a></span></p>
           {/* <p className="text-[14px] mb-4">samgasilan.psychotherapy@gmail.com</p> */}
           <div className="flex flex-col md:flex-row justify-between gap-6 text-[12px]">
             <p>© 2024 Samuel Gasilan. All rights reserved.</p>

@@ -3,11 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '@/utils/motion';
-import styles from '@/styles';
-import { HeaderText } from './ui/CustomTexts';
 import { cardData, cardData2 } from '@/constants';
-import Image from 'next/image';
-import chairs from '../public/chairs.png';
 
 const HomeServices: React.FC = () => {
   const StaggerContainer = staggerContainer(0.3, 0.5);
@@ -64,26 +60,26 @@ const HomeServices: React.FC = () => {
                 variants={fadeIn('left', 'tween', 0.2, 1)}
                 className="rounded-xl overflow-hidden"
               >
-                <Image
+                <img
                   alt="Therapy chairs"
-                  src={chairs}
+                  src='/chairs.png'
                   className="rounded-xl"
                 />
               </motion.div>
             </div>
 
             {/* Service Cards */}
-            <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="w-full flex justify-center mx-auto gap-6">
               {cardData.map((data, index) => (
                 <motion.div
                   key={index}
                   variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
-                  className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-500 hover:shadow-lg"
+                  className="flex bg-gradient-to-br from-[#2F5D62] to-[#A7C4BC] rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-500 hover:shadow-lg"
                 >
-                  <div className="relative z-10 p-6 text-center flex flex-col items-center">
+                  <div className="relative z-10 p-6 text-center flex flex-col justify-center">
                     {/* Icon */}
-                    <div className="w-16 h-16 flex items-center justify-center bg-[#E8F6F8] rounded-full shadow-lg mb-6 transform group-hover:scale-110 transition duration-500">
-                      <div className="text-3xl text-[#2F5D62]">{data.icon}</div>
+                    <div className="w-16 h-16 flex items-center justify-center text-center bg-[#E8F6F8] rounded-full shadow-lg mb-6 transform group-hover:scale-110 transition duration-500">
+                      <div className="text-3xl mx-auto text-[#2F5D62]">{data.icon}</div>
                     </div>
 
                     {/* Title */}
@@ -92,7 +88,7 @@ const HomeServices: React.FC = () => {
                     </h3>
 
                     {/* Subtitle */}
-                    <p className="text-md text-gray-500">
+                    <p className="text-md text-white">
                       {data.subtitle}
                     </p>
                   </div>

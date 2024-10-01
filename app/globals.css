@@ -90,13 +90,22 @@
 
 .gradient-text {
   background-color: #f3ec78;
-  background: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
- -webkit-background-clip: text;
+  background: linear-gradient(-225deg, #65379b 0%, #886aea 53%, #6457c6 100%);
+  -webkit-background-clip: text;
   -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
 
 .main-font {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
+
+.cookie-consent {
+  background-color: white;
+  box-shadow: 0 0 10px rgb(190, 190, 190);
+}
+.cookie-consent p {
+  font-size: 12px;
+}
+

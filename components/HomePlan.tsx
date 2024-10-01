@@ -3,8 +3,6 @@
 import React from 'react';
 import styles from '@/styles';
 import { HeaderText } from './ui/CustomTexts';
-import Image from 'next/image';
-import therapy from '../public/therapy.jpg';
 import { FaChevronRight } from 'react-icons/fa';
 
 const HomePlan: React.FC = () => {
@@ -50,7 +48,7 @@ const HomePlan: React.FC = () => {
 
         {/* Right Column: Image */}
         <div className="md:w-1/2 flex items-center justify-center md:justify-end">
-          <Image alt="Therapy Session" src={therapy} className="rounded-lg shadow-lg" />
+          <img alt="Therapy Session" src='/therapy.jpg' className="rounded-lg shadow-lg" />
         </div>
       </div>
     </section>
