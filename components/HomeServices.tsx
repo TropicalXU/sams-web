@@ -69,12 +69,12 @@ const HomeServices: React.FC = () => {
             </div>
 
             {/* Service Cards */}
-            <div className="w-full flex justify-center mx-auto gap-6">
+            <div className="w-full flex justify-center flex-col md:flex-row mx-auto gap-6">
               {cardData.map((data, index) => (
                 <motion.div
                   key={index}
                   variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
-                  className="flex bg-gradient-to-br from-[#2F5D62] to-[#A7C4BC] rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-500 hover:shadow-lg"
+                  className="flex md:flex-row flex-col bg-gradient-to-br from-[#2F5D62] to-[#A7C4BC] rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-500 hover:shadow-lg"
                 >
                   <div className="relative z-10 p-6 text-center flex flex-col justify-center">
                     {/* Icon */}

@@ -72,9 +72,9 @@ const AreasOfSpecialization = () => {
             whileHover={{ scale: 1.05 }}
             className="bg-white shadow-md rounded-xl p-6 flex flex-col items-start hover:shadow-lg transition-shadow"
           >
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="text-[#2F5D62] text-4xl">{item.icon}</div>
-              <h2 className="text-2xl font-semibold text-[#2F5D62]">{item.title}</h2>
+            <div className="flex items-start md:items-center space-x-4 mb-4">
+              <div className="text-[#2F5D62] text-2xl md:text-4xl">{item.icon}</div>
+              <h2 className="md:text-2xl text-xl font-semibold text-[#2F5D62]">{item.title}</h2>
             </div>
             <p className="text-gray-600">{item.description}</p>
           </motion.div>
